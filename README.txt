@@ -1,5 +1,3 @@
-# Wiki-Search
-
 To run this program, you need to have virtual machine containing the wiki.py file.
 To access this file the machine must allow SSH connections on port 2233.
 
