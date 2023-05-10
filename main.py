@@ -30,13 +30,13 @@ def get_content():
     # declare credentials
     host = '127.0.0.1'
     port = 2233
-    username = 'student'
-    password = 'pass'
+    username = 'VM_USERNAME'
+    password = 'VM_PASSWORD'
     # connect to server
     con = paramiko.SSHClient()
     con.load_system_host_keys()
     con.connect(hostname=host, port=port, username=username, password=password)
-    stdin, stdout, stderr = con.exec_command('python3 /home/student/wiki.py "' + newSearch + '"')
+    stdin, stdout, stderr = con.exec_command('python3 /home/VM_USERNAME/wiki.py "' + newSearch + '"')
     outerr = stderr.readlines()
     print("ERRORS: ", outerr)
     output = stdout.readlines()
